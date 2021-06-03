@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EICV Clock</title>
+	<meta charset="utf-8">
+
+</head>
+<body>
+	<div id=" Mrel"class="rel">
+	<script>
+
+      function sahowtime(){
+      var data = new Date();
+      var diasem = data.getDay();
+      var dia = data.getDate();
+      var mes = data.getMonth();
+      var ano =  data.getFullYear();
+
+      var horas=data.getHours();
+      var min=data.getMinutes();
+      var seg = data.getSeconds();
+
+      var meses=new Array("Janeiro"," fevereiro", "março", "Abril", "Maio", "junho", "Julho", "Agosto", "setembro", "outubro", "Novembro", " Dezembro");
+      var semanas = new Array(" Domingo", "Segunda", "Terça", "Quarta", " Quinta", "Sexta", " Sabado");
+
+
+      var sem = semanas[diasem] + " , " + dia + " de " + meses[mes] + " de " + ano + "<br/> ";
+
+ var time = horas + " : " + min + " : " + seg;
+
+document.getElementeById("Mrel").innerHTML = time;
+console.log(time);
+document.getElementeById("Mrel").innerHTML = sem;
+
+setTimeout(sahowtime, 1000);
+}
+sahowtime();
+  
+
+      
+	</script>
+	</div>
+
+</body>
+</html>

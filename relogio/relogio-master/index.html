@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relogio CV</title>
+</head>
+<body>
+    
+    <div id="horas">00:00</div>
+
+    <script type="text/javascript">
+
+    function apresentarHoras(){
+        var agora = new Date();
+        var hora = agora.getHours();
+        var minutos = agora.getMinutes();
+        var segundos = agora.getSeconds();
+
+        hora = zero(hora);
+        minutos = zero (minutos);
+        segundos = zero (segundos);
+
+       
+
+        function zero(x) {
+        if (x < 10) {
+        x = '0' + x;
+}       return x;
+}
+
+        var horario = hora + ":" + minutos + ":" + segundos;
+
+        document.getElementById('horas').innerHTML = horario;
+}
+
+    setInterval(apresentarHoras, 1000);
+
+
+
+    
+
+	</script>
+</body>
+</html>

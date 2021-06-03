@@ -1,0 +1,11 @@
+#horas{
+    font-size: 50px;
+    color:#e4b532;
+    font-weight: bolder;
+    background-color:#12283b;
+}
+body{
+    display: table;
+    height: 10vh;
+    align-items: center;
+}

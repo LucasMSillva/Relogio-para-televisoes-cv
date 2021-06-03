@@ -1,0 +1,88 @@
+﻿<!Doctype HTML>
+<html lang="pt">
+<head>
+<title>new-model-Clock</title>
+<meta charset=" utf-8">
+<link rel="stylesheet" type="text/css" href="new-model-clock.css">
+<meta http-equiv="refresh" content="10">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<img src="brand.svg">
+		</div>
+		<div class="d1">
+			 <ul class="menu">
+			 	<li><a href="#">Cronometro</a></li>
+			 	<li class="subm"><a href="#">Relogio</a></li>
+			 	<li><a href="#">Alarme</a></li>
+			 </ul>
+		
+
+		<div id="meurelogio" class="relogio">
+		<script type="text/javascript">
+
+		function showtime(){
+			var date = new Date();
+			var h = date.getHours(); //0-23
+			var m = date.getMinutes();// 0-59
+			var s = date.getSeconds(); //0 -59
+			var session = "Am";
+
+			if( h == 0){
+				
+				
+			}
+			if( h>12){
+				
+				session = "PM";	
+			}
+			if(h== 00 && m == 40 ){
+				document.write("Já são meia noite, outro dia ");
+			}	
+			h = (h<10) ? "0" + h : h;
+			m = (m<10) ? "0" + m : m;
+			s = (s<10) ? "0" + s : s;
+		var time =  h + " : " + m + " : " + s + " " + session;
+			//document.getElementById( "meurelogio").innerText = time;
+			//document.getElementById( "meurelogio").textContent = time;
+			document.getElementById("meurelogio").innerHTML = time;
+			console.log(time);
+				setTimeout(showtime, 1000);
+		}
+		showtime();
+	</script>
+	</div>
+
+	<div id="Dt" class="Dt1">
+		<script type="text/javascript">
+
+			function showdata(){
+			var date = new Date();
+			var dia = date.getDate();
+                        var dia1 = date.getDay();
+			var mes = date.getMonth()+1;
+			var mese = date.getMonth();
+			var ano = date.getFullYear();
+
+
+			diase = new Array("Domingo ", " Segunda"," Terça"," Quarta"," Quinta", " Sexta", " Sabado");
+			meses = new Array("Janeiro ", " Fevereiro"," Março"," Abril"," Maio", " Junho"," Julho", " Agosto", " Setembro", " Outubro", " Novembro", "Dezembro");
+	                
+            var data = (diase[dia1] + ", " + dia + " de" + meses[mese] + " de " + ano);
+
+			document.getElementById("Dt").innerHTML = data;
+			console.log(data);
+		}
+		showdata();
+		</script>
+	</div>
+
+
+
+
+	</header>
+</body>
+</html>
+
+

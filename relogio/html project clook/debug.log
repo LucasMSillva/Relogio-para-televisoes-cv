@@ -1,0 +1,3 @@
+[1104/160503.743:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1104/160503.771:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\Aluno\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\d4be6c66-6405-49f2-a186-638b7a7e8129: O sistema não pode encontrar o caminho especificado. (0x3)
+[1105/160503.772:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
